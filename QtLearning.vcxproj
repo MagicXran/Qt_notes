@@ -97,13 +97,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MainWindows.cpp" />
     <ClCompile Include="Student.cpp" />
+    <ClCompile Include="SWidget.cpp" />
     <ClCompile Include="Teacher.cpp" />
     <QtRcc Include="QtLearning.qrc" />
+    <QtUic Include="MainWindow.ui" />
     <QtUic Include="QtLearning.ui" />
     <QtMoc Include="QtLearning.h" />
     <ClCompile Include="QtLearning.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="resources\images\MainInterface.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Teacher.h" />
@@ -113,6 +117,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_header.hpp" />
+    <QtMoc Include="MainWindows.h" />
+    <QtMoc Include="SWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\images\manufacturing_01.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

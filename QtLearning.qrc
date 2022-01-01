@@ -1,4 +1,9 @@
 <RCC>
-    <qresource prefix="QtLearning">
+    <qresource prefix="/">
+        <file>resources/images/manufacturing_01.png</file>
+        <file>resources/images/manufacturing_01.ico</file>
+        <file>resources/images/a3cne-hdzdt-001.ico</file>
+        <file>resources/images/icons8-robot-50.ico</file>
+        <file>resources/images/icons8-robotic-50.ico</file>
     </qresource>
 </RCC>

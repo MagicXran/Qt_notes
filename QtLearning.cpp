@@ -1,6 +1,7 @@
 #include "QtLearning.h"
 #include "Teacher.h"
 #include "Student.h"
+#include "SWidget.h"
 
 #define  N  3
 QtLearning::QtLearning(QWidget* parent)
@@ -13,6 +14,7 @@ QtLearning::QtLearning(QWidget* parent)
 	//this->setFixedSize(800, 600);
 
 	auto btn1 = new QPushButton("关闭", this);
+	btn1->setVisible(false);
 	//auto qptr = QSharedPointer<QPushButton>(new QPushButton("第一个", this));
 	//qptr->get()->setParent(this);
 
@@ -81,4 +83,22 @@ QtLearning::QtLearning(QWidget* parent)
 	connect(b2, &QPushButton::clicked, tea, func_ptr);
 #endif
 
+
+	//窗口切换
+	QPushButton* entry = new QPushButton("进入查询窗口", this);
+	auto swidget = new SWidget();
+	connect(entry, &QPushButton::clicked, [=]()
+		{
+			this->hide();
+			swidget->show();
+		}
+	);
+
+	//返回该窗口
+	connect(swidget, &SWidget::back, [=]()
+		{
+			swidget->hide();
+			this->show();
+		}
+	);
 }
