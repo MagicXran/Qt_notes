@@ -5,5 +5,6 @@
         <file>resources/images/a3cne-hdzdt-001.ico</file>
         <file>resources/images/icons8-robot-50.ico</file>
         <file>resources/images/icons8-robotic-50.ico</file>
+        <file>resources/QssStyle/qss01.qss</file>
     </qresource>
 </RCC>

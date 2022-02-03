@@ -5,8 +5,7 @@
 #endif
 
 #include <iostream>
-
 #include <QDebug>
-#include <QPushButton>
 #include <QSharedPointer>
+#include <exception>
 

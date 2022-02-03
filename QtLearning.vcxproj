@@ -35,6 +35,10 @@
     <QtInstall>5.14.2_msvc2017_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
+    <QtHeaderSearchPath>
+    </QtHeaderSearchPath>
+    <QtLibrarySearchPath>
+    </QtLibrarySearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>5.14.2_msvc2017_64</QtInstall>
@@ -68,7 +72,16 @@
     </ClCompile>
     <ClCompile>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(Qt_LIBS_);%(AdditionalDependencies);</AdditionalDependencies>
+    </Link>
+    <QtRcc>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </QtRcc>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ClCompile>
@@ -76,7 +89,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -97,12 +110,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="animation.cpp" />
+    <ClCompile Include="cm.cpp" />
+    <ClCompile Include="DIYLabel.cpp" />
+    <ClCompile Include="EventStudy.cpp" />
+    <ClCompile Include="Layout.cpp" />
     <ClCompile Include="MainWindows.cpp" />
+    <ClCompile Include="QssStudy.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="SWidget.cpp" />
     <ClCompile Include="Teacher.cpp" />
     <QtRcc Include="QtLearning.qrc" />
+    <QtUic Include="animation.ui" />
+    <QtUic Include="cm.ui" />
+    <QtUic Include="EventStudy.ui" />
+    <QtUic Include="Layout.ui" />
     <QtUic Include="MainWindow.ui" />
+    <QtUic Include="QssStudy.ui" />
     <QtUic Include="QtLearning.ui" />
     <QtMoc Include="QtLearning.h" />
     <ClCompile Include="QtLearning.cpp" />
@@ -116,12 +140,26 @@
     <QtMoc Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="animation.h" />
+    <QtMoc Include="cm.h" />
     <ClInclude Include="common_header.hpp" />
+    <QtMoc Include="EventStudy.h" />
+    <QtMoc Include="DIYLabel.h" />
+    <QtMoc Include="QssStudy.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="Layout.h" />
     <QtMoc Include="MainWindows.h" />
     <QtMoc Include="SWidget.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="resources\images\icons8-robot-50.ico" />
     <Image Include="resources\images\manufacturing_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QtLearning.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\QssStyle\qss01.qss" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

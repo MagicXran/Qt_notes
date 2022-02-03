@@ -52,6 +52,24 @@
     <ClCompile Include="MainWindows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Layout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventStudy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DIYLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QssStudy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Teacher.h">
@@ -66,9 +84,30 @@
     <QtMoc Include="MainWindows.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Layout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EventStudy.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DIYLabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QssStudy.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="animation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="cm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_header.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -79,10 +118,38 @@
     <QtUic Include="resources\images\MainInterface.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="Layout.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="EventStudy.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="QssStudy.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="animation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="cm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\images\manufacturing_01.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="resources\images\icons8-robot-50.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QtLearning.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\QssStyle\qss01.qss">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

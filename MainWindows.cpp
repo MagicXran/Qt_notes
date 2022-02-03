@@ -10,6 +10,9 @@
 #include "QDialog"
 #include "QBoxLayout"
 #include "QMessageBox"
+#include "QFontDialog"
+#include "QFileDialog"
+#include <QPushButton>
 
 MainWindows::MainWindows(QWidget* parent)
 	: QMainWindow(parent)
@@ -104,6 +107,8 @@ MainWindows::MainWindows(QWidget* parent)
 	auto box2 = new QPushButton(QIcon(QPixmap(":/resources/images/icons8-robotic-50.ico")), "警告提示框", this);
 	auto box3 = new QPushButton(QIcon(QPixmap(":/resources/images/icons8-robotic-50.ico")), "信息提示框", this);
 	auto box4 = new QPushButton(QIcon(QPixmap(":/resources/images/icons8-robotic-50.ico")), "询问提示框", this);
+	auto box5 = new QPushButton(QIcon(QPixmap(":/resources/images/icons8-robotic-50.ico")), "文件对话框", this);
+	auto box6 = new QPushButton(QIcon(QPixmap(":/resources/images/icons8-robotic-50.ico")), "字体对话框", this);
 
 	vBoxLayout_1->addWidget(modal_btn);
 	vBoxLayout_1->addWidget(Nonmodal_btn);
@@ -111,6 +116,8 @@ MainWindows::MainWindows(QWidget* parent)
 	vBoxLayout_1->addWidget(box2);
 	vBoxLayout_1->addWidget(box3);
 	vBoxLayout_1->addWidget(box4);
+	vBoxLayout_1->addWidget(box5);
+	vBoxLayout_1->addWidget(box6);
 
 	dock->setWidget(btn_group);
 
@@ -162,10 +169,35 @@ MainWindows::MainWindows(QWidget* parent)
 	);
 	connect(box4, &QPushButton::clicked, [&]()
 		{
-			qDebug() << QMessageBox::question(this, "询问提示框", "询问哦! ");
+			qDebug() << QMessageBox::question(this, tr("询问提示框"), "询问哦! ");
 		}
 	);
 
+
+	//字体对话框
+	connect(box6, &QPushButton::clicked, [&]()
+		{
+			bool yes;
+			QFont font;
+			font = QFontDialog::getFont(&yes, QFont("宋体"), this);
+			qDebug() << "yes= " << yes;
+			if (yes)
+			{
+				qDebug() << tr("字体为: ") << font.family() << tr("其余功能看其成员函数") << endl;
+			}
+		}
+	);
+
+
+
+	//文件对话框
+	connect(box5, &QPushButton::clicked, [&]()
+		{
+			QString file_name = nullptr;
+			file_name = QFileDialog::getOpenFileName(this);
+			qDebug() << file_name << endl;
+		}
+	);
 }
 
 MainWindows::~MainWindows()
