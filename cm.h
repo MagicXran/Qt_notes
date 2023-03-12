@@ -11,6 +11,9 @@ public:
 	CM(QWidget *parent = Q_NULLPTR);
 	~CM();
 
+	void redner();
+
 private:
 	Ui::CM ui;
+	int prog_num;
 };

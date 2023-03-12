@@ -120,7 +120,6 @@
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="SWidget.cpp" />
     <ClCompile Include="Teacher.cpp" />
-    <QtRcc Include="QtLearning.qrc" />
     <QtUic Include="animation.ui" />
     <QtUic Include="cm.ui" />
     <QtUic Include="EventStudy.ui" />

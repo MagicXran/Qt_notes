@@ -1,10 +1,10 @@
-#include "QtLearning.h"
 #include <QtWidgets/QApplication>
-#include "MainWindows.h"
-#include "Layout.h"
+//#include "QtLearning.h"
+//#include "MainWindows.h"
+//#include "Layout.h"
 #include "EventStudy.h"
-#include "QssStudy.h"
-#include "animation.h"
+//#include "QssStudy.h"
+//#include "animation.h"
 #include "cm.h"
 
 int main(int argc, char *argv[])
